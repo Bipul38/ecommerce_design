@@ -1,5 +1,5 @@
-<h3>WELCOME TO LAWYER PORTFOLIO PROJECT<h3>
-<img src="./mockup/1.jpg" style="max-width:250px; width:100%;">
+<h3>WELCOME TO ECOMMERCE DESIGN PROJECT<h3>ecommerce_design
+<img src="./mockup/11.JPG" style="max-width:250px; width:100%;">
 <h5>Technologies<h5>
  <ol>
     <li>HTML 5<li>
@@ -45,7 +45,7 @@
 <h5>section description<h5>
 <p>
 <b>Introduction:</b>
-Welcome to my lawyer portfolio website, your digital gateway to a world of legal expertise and dedication. This online platform is designed to provide a comprehensive overview of my professional background, skills, and accomplishments as a practicing attorney. Whether you're a prospective client seeking legal counsel, a colleague in the legal field, or anyone interested in learning more about my legal journey, this website aims to offer valuable insights and make a lasting impression.</p>
+Welcome to my ECOMMERCE DESIGN website, your digital gateway to a world of legal expertise and dedication. This online platform is designed to provide a comprehensive overview of my professional background, skills, and accomplishments as a practicing attorney. Whether you're a prospective client seeking legal counsel, a colleague in the legal field, or anyone interested in learning more about my legal journey, this website aims to offer valuable insights and make a lasting impression.</p>
 
 <p>
 <b>Home Page:</b>A clean and professional design with a welcoming message.
