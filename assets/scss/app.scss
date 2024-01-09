@@ -1,0 +1,60 @@
+@import "./vendors/font";
+@import "./vendors/variables";
+@import "./mixins/media";
+@import "./vendors/reset";
+
+@import "./components/button";
+@import "./components/common_heading";
+
+@import "./layouts/container";
+@import "./layouts/header";
+@import "./layouts/navbar";
+@import "./layouts/footer";
+
+@import "./views/about";
+@import "./views/contact";
+@import "./views/home";
+
+// @mixin br_bg($bg_color: blue, $br_width: 2px, $br_color: red) {
+//     background-color: $bg_color;
+//     border: $br_width solid $br_color;
+//     @content();
+// }
+
+// .box {
+//     height: 200px;
+//     width: 1400px;
+//     background-color: red;
+//     margin-bottom: 10px;
+
+//     @include xs() {
+//         background-color: aqua;
+//         width: 90%;
+//     }
+//     @include sm() {
+//         background-color: rgb(0, 38, 255);
+//         width: 90%;
+//         border-radius: 30px;
+//     }
+//     @include md() {
+//         background-color: rgb(0, 255, 13);
+//         width: 80%;
+//         border-radius: 40px;
+//     }
+//     @include lg() {
+//         background-color: rgb(255, 0, 242);
+//         width: 90%;
+//         border-radius: 30px;
+//     }
+//     @include xl() {
+//         background-color: rgba(158, 71, 81, 0.275);
+//         width: 80%;
+//         border-radius: 30px;
+//     }
+//     @include xxl() {
+//         background-color: rgb(198, 89, 21);
+//         width: 90%;
+//         border-radius: 30px;
+//     }
+// }
+
