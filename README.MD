@@ -1,5 +1,5 @@
 <h3>WELCOME TO ECOMMERCE DESIGN PROJECT<h3>ecommerce_design
-<img src="./mockup/11.JPG" style="max-width:250px; width:100%;">
+<img src="https://github.com/Bipul38/ecommerce_design/blob/main/mockup/11.JPG?raw=truegit" style="max-width:250px; width:100%;">
 <h5>Technologies<h5>
  <ol>
     <li>HTML 5<li>
