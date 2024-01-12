@@ -186,10 +186,16 @@ nav .nav_body .action_menus ul {
   height: 100%;
   gap: 25px;
 }
+nav .nav_body .action_menus ul li {
+  position: relative;
+}
 nav .nav_body .action_menus ul li a .svg_icon {
   transition-duration: 0.3s;
 }
 nav .nav_body .action_menus ul li a:hover .svg_icon {
+  background-color: var(--secondary);
+}
+nav .nav_body .action_menus ul li:has(.active) > a .svg_icon {
   background-color: var(--secondary);
 }
 
@@ -304,6 +310,53 @@ nav .nav_body .action_menus ul li a:hover .svg_icon {
   font-size: 16px;
   color: var(--black);
   font-weight: 400;
+}
+
+.user_drop_down_actions {
+  position: absolute;
+  top: calc(100% + 23px);
+  right: 0;
+  width: 230px;
+  background-color: white;
+  padding: 16px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  box-shadow: 0px 10px 10px -7px rgba(12, 104, 244, 0.5490196078);
+  border-top: 2px solid var(--primary);
+  display: none;
+  z-index: 9;
+}
+.user_drop_down_actions.active {
+  display: block;
+}
+.user_drop_down_actions ul {
+  display: grid;
+  gap: 24px;
+}
+.user_drop_down_actions ul li a {
+  display: flex;
+  gap: 16px;
+  align-content: flex-start;
+}
+.user_drop_down_actions ul li a:hover .content h4, .user_drop_down_actions ul li a:hover .content p {
+  color: var(--black);
+}
+.user_drop_down_actions ul li a .content h4 {
+  font-size: 18px;
+  color: var(--primary);
+  margin: 0;
+  margin-bottom: 9px;
+  line-height: 18px;
+  font-weight: 300;
+}
+.user_drop_down_actions ul li a .content h4.block {
+  color: var(--black);
+}
+.user_drop_down_actions ul li a .content p {
+  font-size: 14px;
+  margin: 0;
+  line-height: 14px;
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=app.css.map */
