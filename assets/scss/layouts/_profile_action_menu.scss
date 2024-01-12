@@ -1,0 +1,58 @@
+.user_drop_down_actions {
+    position: absolute;
+    top: calc(100% + 23px);
+    right: 0;
+    width: 230px;
+    background-color: white;
+    padding: 16px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    box-shadow: 0px 10px 10px -7px #0c68f48c;
+    border-top: 2px solid var(--primary);
+    display: none;
+    z-index: 9;
+
+    &.active{
+        display: block;
+    }
+    ul{
+        display: grid;
+        gap: 24px;
+        li{
+            a{
+                display: flex;
+                gap: 16px;
+                align-content: flex-start;
+
+                &:hover{
+                    .content{
+                        h4,p{
+                            color: var(--black);
+                        }
+                    }
+                }
+
+                .icon{}
+                .content{
+                    h4{
+                        font-size: 18px;
+                        color: var(--primary);
+                        margin: 0;
+                        margin-bottom: 9px;
+                        line-height: 18px;
+                        font-weight: 300;
+                        &.block{
+                            color: var(--black);
+                        }
+                    }
+                    p{
+                        font-size: 14px;
+                        margin: 0;
+                        line-height: 14px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+}
