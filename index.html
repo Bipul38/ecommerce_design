@@ -50,7 +50,7 @@
     <link rel="stylesheet" href="././assets/fonts/google_icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/styles/app.css">
-    
+
     <script src="./assets/js/app.js"></script>
 </head>
 
@@ -78,7 +78,7 @@
                     <div class="action_menus">
                         <ul>
                             <li>
-                                <a href="#">
+                                <a onclick="event.preventDefault(); search_model.classList.toggle('active')" href="#">
                                     <div class="svg_icon" style=" -webkit-mask-image: url('./assets/images/icons/search.svg');
                                     mask-image: url('./assets/images/icons/search.svg');"></div>
                                 </a>
@@ -98,7 +98,8 @@
                                             <template x-for="(i, index) in header_cart_products">
                                                 <div class="cart_item">
                                                     <div class="img">
-                                                        <img x-bind:src="`./assets/images/dummy_products/${i.image_no}.jpg`" alt="">
+                                                        <img x-bind:src="`./assets/images/dummy_products/${i.image_no}.jpg`"
+                                                            alt="">
                                                     </div>
                                                     <div class="content">
                                                         <h3 class="product_name" x-text="i.name"></h3>
@@ -110,14 +111,16 @@
                                                         <div class="extra_features">
                                                             <ul>
                                                                 <li>
-                                                                    <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/van.svg');
+                                                                    <div class="svg_icon"
+                                                                        style="-webkit-mask-image: url('./assets/images/icons/van.svg');
                                                                         mask-image: url('./assets/images/icons/van.svg');"></div>
                                                                     <div>
                                                                         free delivery
                                                                     </div>
                                                                 </li>
                                                                 <li>
-                                                                    <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/badge.svg');
+                                                                    <div class="svg_icon"
+                                                                        style="-webkit-mask-image: url('./assets/images/icons/badge.svg');
                                                                         mask-image: url('./assets/images/icons/badge.svg');"></div>
                                                                     <div>
                                                                         Guaranteed
@@ -127,27 +130,31 @@
                                                         </div>
                                                         <div class="qty_changer">
                                                             <div class="price">
-                                                                $ <span x-bind:id="`price_${index}`" x-bind:data-price="i.price" x-text="i.price"></span>
+                                                                $ <span x-bind:id="`price_${index}`"
+                                                                    x-bind:data-price="i.price" x-text="i.price"></span>
                                                             </div>
                                                             <div class="qty_updater">
                                                                 <button class="delete_cart">
-                                                                    <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/trash.svg');
+                                                                    <div class="svg_icon"
+                                                                        style="-webkit-mask-image: url('./assets/images/icons/trash.svg');
                                                                         mask-image: url('./assets/images/icons/trash.svg');"></div>
                                                                 </button>
                                                                 <div class="qty_input">
                                                                     <button @click="decrement_cart('price_${index}')">
-                                                                        <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/minus.svg');
+                                                                        <div class="svg_icon"
+                                                                            style="-webkit-mask-image: url('./assets/images/icons/minus.svg');
                                                                         mask-image: url('./assets/images/icons/minus.svg');"></div>
                                                                     </button>
-                                                                    <input type="number"  value="1" min="1">
+                                                                    <input type="number" value="1" min="1">
                                                                     <button @click="increment_cart('price_${index}')">
-                                                                        <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/plus.svg');
+                                                                        <div class="svg_icon"
+                                                                            style="-webkit-mask-image: url('./assets/images/icons/plus.svg');
                                                                         mask-image: url('./assets/images/icons/plus.svg');"></div>
                                                                     </button>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>  
+                                                    </div>
                                                 </div>
                                             </template>
                                         </div>
@@ -252,8 +259,7 @@
                                 <template x-for="category in product_categories">
                                     <li>
                                         <a href="#">
-                                            <div class="svg_icon"
-                                                x-bind:style="` -webkit-mask-image: url('${category.icon}');
+                                            <div class="svg_icon" x-bind:style="` -webkit-mask-image: url('${category.icon}');
                                                                         mask-image: url('${category.icon}');`">
                                             </div>
                                             <span class="text" x-text="category.name"></span>
@@ -268,8 +274,7 @@
                                     <template x-for="category in product_subcategories">
                                         <li>
                                             <a href="#">
-                                                <div class="svg_icon"
-                                                    x-bind:style="` -webkit-mask-image: url('${category.icon}');
+                                                <div class="svg_icon" x-bind:style="` -webkit-mask-image: url('${category.icon}');
                                                                             mask-image: url('${category.icon}');`">
                                                 </div>
                                                 <span class="text" x-text="category.name"></span>
@@ -299,8 +304,91 @@
             </div>
         </div>
     </section>
-
     <script src="./assets/js/pluggins/alpine.js"></script>
+    <section id="search_model">
+        <div class="search_overlay">
+            <div class="search_card" x-data="{search_key:``}">
+                <div class="top">
+                    <form class="search_form" action="#">
+                        <div class="search_input">
+                            <input x-model="search_key" placeholder="search your product" class="input" type="text">
+                            <button class="submit_btn">
+                                <div class="svg_icon"
+                                    style=" -webkit-mask-image: url('./assets/images/icons/search.svg'); mask-image: url('./assets/images/icons/search.svg');">
+                                </div>
+                            </button>
+                        </div>
+                        <div class="icon_part">
+                            <div class="close"  onclick="event.preventDefault(); search_model.classList.toggle('active')">
+                                <div class="svg_icon"
+                                    style=" -webkit-mask-image: url('./assets/images/icons/close.svg'); mask-image: url('./assets/images/icons/close.svg');">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="bottom">
+                    <div x-show="search_key.length == 0" class="suggested_keywords">
+                        <div class="keyword_group">
+                            <h3 class="heading">The Most Searched Items</h3>
+                            <ul class="link_list" x-data="{search_keywords}">
+                                <template x-for="keyword in search_keywords">
+                                    <li>
+                                        <a href="#" x-text="keyword"></a>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                        <div class="keyword_group">
+                            <h3 class="heading">The Most Used Items</h3>
+                            <ul class="link_list" x-data="{search_keywords}">
+                                <template x-for="keyword in search_keywords">
+                                    <li>
+                                        <a href="#" x-text="keyword"></a>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                    </div>
+                    <div x-show="search_key.length > 0" class="suggested_result">
+                        <div class="left">
+                            <h4 class="search_at_a_glance">view 17 out of 30 results</h4>
+                            <div class="result_list">
+                                <ul x-data="{}">
+                                    <template x-for="i in 18">
+                                        <li>
+                                            <a href="#">
+                                                <span x-text="i"></span> 
+                                                iphone 
+                                                <span class="search_match" x-text="search_key"></span>
+                                            </a>
+                                        </li>
+                                    </template>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="matched_products">
+                                <div x-data="{jumbo_menu_products}" class="product_items">
+                                    <template x-for="product in jumbo_menu_products">
+                                        <div class="nav_product">
+                                            <div class="img">
+                                                <img x-bind:src="product.image_no" alt="product_image">
+                                            </div>
+                                            <a href="">
+                                                <h4 class="product_title" x-text="product.name"></h4>
+                                            </a>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </body>
 
 </html>
