@@ -20,8 +20,8 @@ var header_cart_products = [
 ];
 var jumbo_menu_products = [
     {
-        image_no: `./assets/images/dummy_products/1.jpg`,
-        name: `Extra Layer for Travellers`,
+        image_no: `./assets/images/dummy_products/10.jpg`,
+        name: `Waterproof Smart Watch for Men`,
         price: `250`,
     },
     {
@@ -37,8 +37,7 @@ var jumbo_menu_products = [
     },
     {
         image_no: `./assets/images/dummy_products/7.jpg`,
-        name: `Laptop Privacy Screen for 13 inch 
-        MacBook Pro & MacBook Air`,
+        name: `Laptop Privacy Screen for 13 inch`,
         price: `50`,
     },
    
@@ -101,6 +100,19 @@ var product_subcategories = [
         name: `View all`,
     },
 ];
+
+let search_keywords = [
+    "Macbook Pro",
+    "Airpods Pro",
+    "Samsung S9",
+    "Tablet",
+    "Xiaomi ",
+    "JBL speaker",
+    "Canon",
+    "Asus",
+    "MagSafe",
+    "AirPods Max",
+]
 
 function increment_cart(price_target){
     event.preventDefault();
