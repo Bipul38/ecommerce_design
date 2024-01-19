@@ -50,6 +50,7 @@
     <link rel="stylesheet" href="././assets/fonts/google_icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/styles/app.css">
+    
     <script src="./assets/js/app.js"></script>
 </head>
 
@@ -93,167 +94,63 @@
                                         <h3 class="cart_top_title">3 items</h3>
                                     </div>
                                     <div class="mid">
-                                        <div class="cart_item_list">
-                                            <div class="cart_item">
-                                                <div class="img">
-                                                    <img src="./assets/images/products/c1.png" alt="">
-                                                </div>
-                                                <div class="content">
-                                                    <h3 class="product_name">MacBook Pro M2 MNEJ3 2022 LLA </h3>
-                                                    <h2 class="size">13.3 inch</h2>
-                                                    <h4 class="color">black</h4>
-                                                    <div class="qty">
-                                                        ×1
+                                        <div x-data="header_cart_products" class="cart_item_list">
+                                            <template x-for="(i, index) in header_cart_products">
+                                                <div class="cart_item">
+                                                    <div class="img">
+                                                        <img x-bind:src="`./assets/images/dummy_products/${i.image_no}.jpg`" alt="">
                                                     </div>
-                                                    <div class="extra_features">
-                                                        <ul>
-                                                            <li>
-                                                                <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/van.svg');
-                                                                    mask-image: url('./assets/images/icons/van.svg');"></div>
-                                                                <div>
-                                                                    free delivery
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/badge.svg');
-                                                                    mask-image: url('./assets/images/icons/badge.svg');"></div>
-                                                                <div>
-                                                                    Guaranteed
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="qty_changer">
-                                                        <div class="price">
-                                                            $ <span id="price_1" data-price="433.00">433.00</span>
+                                                    <div class="content">
+                                                        <h3 class="product_name" x-text="i.name"></h3>
+                                                        <h2 class="size">13.3 inch</h2>
+                                                        <h4 class="color">black</h4>
+                                                        <div class="qty">
+                                                            ×1
                                                         </div>
-                                                        <div class="qty_updater">
-                                                            <button class="delete_cart">
-                                                                <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/trash.svg');
-                                                                    mask-image: url('./assets/images/icons/trash.svg');"></div>
-                                                            </button>
-                                                            <div class="qty_input">
-                                                                <button onclick="decrement_cart('price_1')">
-                                                                    <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/minus.svg');
-                                                                    mask-image: url('./assets/images/icons/minus.svg');"></div>
+                                                        <div class="extra_features">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/van.svg');
+                                                                        mask-image: url('./assets/images/icons/van.svg');"></div>
+                                                                    <div>
+                                                                        free delivery
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/badge.svg');
+                                                                        mask-image: url('./assets/images/icons/badge.svg');"></div>
+                                                                    <div>
+                                                                        Guaranteed
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="qty_changer">
+                                                            <div class="price">
+                                                                $ <span x-bind:id="`price_${index}`" x-bind:data-price="i.price" x-text="i.price"></span>
+                                                            </div>
+                                                            <div class="qty_updater">
+                                                                <button class="delete_cart">
+                                                                    <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/trash.svg');
+                                                                        mask-image: url('./assets/images/icons/trash.svg');"></div>
                                                                 </button>
-                                                                <input type="number"  value="1" min="1">
-                                                                <button onclick="increment_cart('price_1')">
-                                                                    <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/plus.svg');
-                                                                    mask-image: url('./assets/images/icons/plus.svg');"></div>
-                                                                </button>
+                                                                <div class="qty_input">
+                                                                    <button @click="decrement_cart('price_${index}')">
+                                                                        <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/minus.svg');
+                                                                        mask-image: url('./assets/images/icons/minus.svg');"></div>
+                                                                    </button>
+                                                                    <input type="number"  value="1" min="1">
+                                                                    <button @click="increment_cart('price_${index}')">
+                                                                        <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/plus.svg');
+                                                                        mask-image: url('./assets/images/icons/plus.svg');"></div>
+                                                                    </button>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>  
-                                            </div>
-                                            <div class="cart_item">
-                                                <div class="img">
-                                                    <img src="./assets/images/products/c2.png" alt="">
+                                                    </div>  
                                                 </div>
-                                                <div class="content">
-                                                    <h3 class="product_name">Inateck 12.3-13 Inch MacBook Case Sleeve  </h3>
-                                                    <h4 class="color">blue</h4>
-                                                    <div class="qty">
-                                                        ×1
-                                                    </div>
-                                                    <div class="extra_features">
-                                                        <ul>
-                                                            <li>
-                                                                <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/van.svg');
-                                                                    mask-image: url('./assets/images/icons/van.svg');"></div>
-                                                                <div>
-                                                                    free delivery
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/badge.svg');
-                                                                    mask-image: url('./assets/images/icons/badge.svg');"></div>
-                                                                <div>
-                                                                    Guaranteed
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="qty_changer">
-                                                        <div class="price">
-                                                            $ <span id="price_2" data-price="433.00">433.00</span>
-                                                        </div>
-                                                        <div class="qty_updater">
-                                                            <button class="delete_cart">
-                                                                <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/trash.svg');
-                                                                    mask-image: url('./assets/images/icons/trash.svg');"></div>
-                                                            </button>
-                                                            <div class="qty_input">
-                                                                <button onclick="decrement_cart('price_2')">
-                                                                    <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/minus.svg');
-                                                                    mask-image: url('./assets/images/icons/minus.svg');"></div>
-                                                                </button>
-                                                                <input type="number"  value="1" min="1">
-                                                                <button onclick="increment_cart('price_2')">
-                                                                    <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/plus.svg');
-                                                                    mask-image: url('./assets/images/icons/plus.svg');"></div>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>  
-                                            </div>
-                                            <div class="cart_item">
-                                                <div class="img">
-                                                    <img src="./assets/images/products/c3.png" alt="">
-                                                </div>
-                                                <div class="content">
-                                                    <h3 class="product_name">Laptop Privacy Screen for 13 inch 
-                                                        MacBook Pro & MacBook Air </h3>
-                                                    <h4 class="color">black</h4>
-                                                    <div class="qty">
-                                                        ×1
-                                                    </div>
-                                                    <div class="extra_features">
-                                                        <ul>
-                                                            <li>
-                                                                <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/van.svg');
-                                                                    mask-image: url('./assets/images/icons/van.svg');"></div>
-                                                                <div>
-                                                                    free delivery
-                                                                </div>
-                                                            </li>
-                                                            <li>
-                                                                <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/badge.svg');
-                                                                    mask-image: url('./assets/images/icons/badge.svg');"></div>
-                                                                <div>
-                                                                    Guaranteed
-                                                                </div>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="qty_changer">
-                                                        <div class="price">
-                                                            $ <span id="price_3" data-price="433.00">433.00</span>
-                                                        </div>
-                                                        <div class="qty_updater">
-                                                            <button class="delete_cart">
-                                                                <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/trash.svg');
-                                                                    mask-image: url('./assets/images/icons/trash.svg');"></div>
-                                                            </button>
-                                                            <div class="qty_input">
-                                                                <button onclick="decrement_cart('price_3')">
-                                                                    <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/minus.svg');
-                                                                    mask-image: url('./assets/images/icons/minus.svg');"></div>
-                                                                </button>
-                                                                <input type="number"  value="1" min="1">
-                                                                <button onclick="increment_cart('price_3')">
-                                                                    <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/plus.svg');
-                                                                    mask-image: url('./assets/images/icons/plus.svg');"></div>
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>  
-                                            </div>
+                                            </template>
                                         </div>
-                                       
                                     </div>
                                     <div class="bottom">
                                         <div class="left">
@@ -271,43 +168,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                 <!-- <div class="cart_items">
-                                    <div class="top">
-                                        <h3>3 items</h3>
-                                    </div>
-                                    <div class="mid">
-                                        <div class="cart_item_list">
-                                            <div class="cart_item">
-                                                <div class="img">
-                                                    <img src="" alt="">
-                                                </div>
-                                                <div class="content">
-                                                    <h3 class="product_name">MacBook Pro M2 MNEJ3 2022 LLA</h3>
-                                                    <h2 class="size">13.3 inch</h2>
-                                                    <h4 class="color">black</h4>
-                                                    <div class="qty">
-                                                        ×1
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="left">
-                                            <h5 class="title">Grand Total</h5>
-                                            <h4 class="amount">$543.02</h4>
-                                        </div>
-                                        <div class="right">
-                                            <a href="#">
-                                                <span title>
-                                                    Proceed to Cart
-                                                </span>
-                                                <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/cart.svg');
-                                                    mask-image: url('./assets/images/icons/cart.svg');"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div> -->
                             </li>
                             <li>
                                 <a href="#" onclick="user_drop_down_actions.classList.toggle('active')">
@@ -388,155 +248,49 @@
                 <div class="overlay">
                     <div class="product_categories">
                         <div class="category_list">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <div class="svg_icon"
-                                            style=" -webkit-mask-image: url('./assets/images/icons/mobile.svg');
-                                                                    mask-image: url('./assets/images/icons/mobile.svg');">
-                                        </div>
-                                        <span class="text">Mobile Phones</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="svg_icon"
-                                            style=" -webkit-mask-image: url('./assets/images/icons/laptop.svg');
-                                                                    mask-image: url('./assets/images/icons/laptop.svg');">
-                                        </div>
-                                        <span>Laptops & Computers </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="svg_icon"
-                                            style=" -webkit-mask-image: url('./assets/images/icons/tablet.svg');
-                                                                    mask-image: url('./assets/images/icons/tablet.svg');">
-                                        </div>
-                                        <span>Tablets & E-reader</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="svg_icon"
-                                            style=" -webkit-mask-image: url('./assets/images/icons/wearables.svg');
-                                                                    mask-image: url('./assets/images/icons/wearables.svg');">
-                                        </div>
-                                        <span>Wearables</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="svg_icon"
-                                            style=" -webkit-mask-image: url('./assets/images/icons/audio.svg');
-                                                                    mask-image: url('./assets/images/icons/audio.svg');">
-                                        </div>
-                                        <span>Audio</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="svg_icon"
-                                            style=" -webkit-mask-image: url('./assets/images/icons/cameras.svg');
-                                                                    mask-image: url('./assets/images/icons/cameras.svg');">
-                                        </div>
-                                        <span>Cameras</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="svg_icon"
-                                            style=" -webkit-mask-image: url('./assets/images/icons/gaming.svg');
-                                                                    mask-image: url('./assets/images/icons/gaming.svg');">
-                                        </div>
-                                        <span>Gaming</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="svg_icon"
-                                            style=" -webkit-mask-image: url('./assets/images/icons/networking.svg');
-                                                                    mask-image: url('./assets/images/icons/networking.svg');">
-                                        </div>
-                                        <span>Networking</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="svg_icon"
-                                            style=" -webkit-mask-image: url('./assets/images/icons/accessories.svg');
-                                                                    mask-image: url('./assets/images/icons/accessories.svg');">
-                                        </div>
-                                        <span>Accessories</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="svg_icon"
-                                            style=" -webkit-mask-image: url('./assets/images/icons/smartphones.svg');
-                                                                    mask-image: url('./assets/images/icons/smartphones.svg');">
-                                        </div>
-                                        <span>Smart Phones</span>
-                                    </a>
+                            <ul x-data="{product_categories}">
+                                <template x-for="category in product_categories">
+                                    <li>
+                                        <a href="#">
+                                            <div class="svg_icon"
+                                                x-bind:style="` -webkit-mask-image: url('${category.icon}');
+                                                                        mask-image: url('${category.icon}');`">
+                                            </div>
+                                            <span class="text" x-text="category.name"></span>
+                                        </a>
+                                    </li>
+                                </template>
                             </ul>
                         </div>
                         <div class="subcategory_list">
                             <div class="subcategories">
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <div class="svg_icon"
-                                                style=" -webkit-mask-image: url('./assets/images/icons/smartphones.svg');
-                                                                        mask-image: url('./assets/images/icons/smartphones.svg');">
-                                            </div>
-                                            <span>Smart Phones</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <div class="svg_icon"
-                                                style=" -webkit-mask-image: url('./assets/images/icons/accessories.svg');
-                                                                        mask-image: url('./assets/images/icons/accessories.svg');">
-                                            </div>
-                                            <span>accessories</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            View all
-                                        </a>
-                                    </li>
+                                <ul x-data="{product_subcategories}">
+                                    <template x-for="category in product_subcategories">
+                                        <li>
+                                            <a href="#">
+                                                <div class="svg_icon"
+                                                    x-bind:style="` -webkit-mask-image: url('${category.icon}');
+                                                                            mask-image: url('${category.icon}');`">
+                                                </div>
+                                                <span class="text" x-text="category.name"></span>
+                                            </a>
+                                        </li>
+                                    </template>
                                 </ul>
                             </div>
                             <div class="top_products">
                                 <div onclick="product_category_jumbo_menu.classList.toggle('active')" class="close">
                                     <a href="#">close</a>
                                 </div>
-                                <div class="nav_product_items">
-                                    <div class="nav_product">
-                                        <img src="././assets/images/products/p1.png" alt="product_image">
-                                        <a href="">
-                                            <h4>Watch & Earpods</h4>
-                                        </a>
-                                    </div>
-                                    <div class="nav_product">
-                                        <img src="././assets/images/products/p1.png" alt="product_image">
-                                        <a href="">
-                                            <h4>Watch & Earpods</h4>
-                                        </a>
-                                    </div>
-                                    <div class="nav_product">
-                                        <img src="././assets/images/products/p1.png" alt="product_image">
-                                        <a href="">
-                                            <h4>Watch & Earpods</h4>
-                                        </a>
-                                    </div>
-                                    <div class="nav_product">
-                                        <img src="././assets/images/products/p1.png" alt="product_image">
-                                        <a href="">
-                                            <h4>Watch & Earpods</h4>
-                                        </a>
-                                    </div>
+                                <div x-data="{jumbo_menu_products}" class="nav_product_items">
+                                    <template x-for="product in jumbo_menu_products">
+                                        <div class="nav_product">
+                                            <img x-bind:src="product.image_no" alt="product_image">
+                                            <a href="">
+                                                <h4 x-text="product.name"></h4>
+                                            </a>
+                                        </div>
+                                    </template>
                                 </div>
                             </div>
                         </div>
@@ -546,6 +300,7 @@
         </div>
     </section>
 
+    <script src="./assets/js/pluggins/alpine.js"></script>
 </body>
 
 </html>
