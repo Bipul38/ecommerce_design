@@ -47,10 +47,16 @@
     <link rel="fabicon" type="image/png" sizes="16x16" href="https://www.facebook.com/TechParkITorg/">
 
     <title>Ecommerce</title>
-    <link rel="stylesheet" href="././assets/fonts/google_icons.css">
+    <link rel="stylesheet" href="./assets/fonts/google_icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="./assets/styles/app.css">
 
+    <link rel="stylesheet" href="./assets/pluggins/owl carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/pluggins/owl carousel/owl.theme.default.min.css">
+
+    <script src="./assets/js/pluggins/jq.js"></script>
+    <script src="./assets/pluggins/owl carousel/owl.carousel.min.js"></script>
+
+    <link rel="stylesheet" href="./assets/styles/app.css">
     <script src="./assets/js/app.js"></script>
 </head>
 
@@ -249,7 +255,7 @@
             </div>
         </nav>
     </header>
-    <section id="product_category_jumbo_menu" class="active">
+    <section id="product_category_jumbo_menu" class="">
         <div class="container">
             <div class="product_list_menu">
                 <div class="overlay">
@@ -304,7 +310,7 @@
             </div>
         </div>
     </section>
-    <script src="./assets/js/pluggins/alpine.js"></script>
+
     <section id="search_model">
         <div class="search_overlay">
             <div class="search_card" x-data="{search_key:``}">
@@ -319,7 +325,8 @@
                             </button>
                         </div>
                         <div class="icon_part">
-                            <div class="close"  onclick="event.preventDefault(); search_model.classList.toggle('active')">
+                            <div class="close"
+                                onclick="event.preventDefault(); search_model.classList.toggle('active')">
                                 <div class="svg_icon"
                                     style=" -webkit-mask-image: url('./assets/images/icons/close.svg'); mask-image: url('./assets/images/icons/close.svg');">
                                 </div>
@@ -358,8 +365,8 @@
                                     <template x-for="i in 18">
                                         <li>
                                             <a href="#">
-                                                <span x-text="i"></span> 
-                                                iphone 
+                                                <span x-text="i"></span>
+                                                iphone
                                                 <span class="search_match" x-text="search_key"></span>
                                             </a>
                                         </li>
@@ -389,6 +396,197 @@
         </div>
     </section>
 
+    <section id="banner">
+        <div class="container">
+            <div class="banner_content">
+                <div class="left">
+                    <h1 class="heading">Tech Heim</h1>
+                    <h2 class="sub_heading">
+                        "Join the <span>digital revolution</span>"
+
+                    </h2>
+                    <a class="btn banner_btn btn_v2" href="#">Explore More</a>
+                </div>
+                <div class="right">
+                    <div class="img">
+                        <img src="./assets/images/banners/1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div x-data="top_categories" class="top_categories">
+                <template x-for=" categories in top_categories" x-key="i">
+                    <div class="item">
+                        <div class="img">
+                            <img x-bind:src="categories.image" alt="product_image">
+                            <div class="title">
+                                <h3 x-text="categories.name"></h3>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+
+            <div class="top_sales_part">
+                <div class="left">
+                    <h2 class="heading">Products On Sale</h2>
+                    <h3 class="sub_heading">Shop Now!</h3>
+                    <div>
+                        <a class="link" href="#">
+                            <span>
+                                View all
+                            </span>
+                            <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/angle_right.svg');
+                                mask-image: url('./assets/images/icons/angle_right.svg');">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="right">
+                    <div x-data="" class="product_list owl-carousel top_sales_product_slide">
+                            <div class="product_item product_v1">
+                                <div class="discount">
+                                    50%
+                                </div>
+                                <div class="img">
+                                    <img src="./assets/images/products/d1.png" alt="mouse">
+                                </div>
+                                <div>
+                                    <h2 class="title">Logitech G502 Gaming Mouse</h2>
+                                </div>
+                                <div class="price_area">
+                                    <div class="del_price">
+                                        <del>
+                                            $38.00
+                                        </del>
+                                    </div>
+                                    <div class="price">
+                                        $19.00
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product_item product_v1">
+                                <div class="discount">
+                                    50%
+                                </div>
+                                <div class="img">
+                                    <img src="./assets/images/products/d1.png" alt="mouse">
+                                </div>
+                                <div>
+                                    <h2 class="title">Logitech G502 Gaming Mouse</h2>
+                                </div>
+                                <div class="price_area">
+                                    <div class="del_price">
+                                        <del>
+                                            $38.00
+                                        </del>
+                                    </div>
+                                    <div class="price">
+                                        $19.00
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product_item product_v1">
+                                <div class="discount">
+                                    50%
+                                </div>
+                                <div class="img">
+                                    <img src="./assets/images/products/d1.png" alt="mouse">
+                                </div>
+                                <div>
+                                    <h2 class="title">Logitech G502 Gaming Mouse</h2>
+                                </div>
+                                <div class="price_area">
+                                    <div class="del_price">
+                                        <del>
+                                            $38.00
+                                        </del>
+                                    </div>
+                                    <div class="price">
+                                        $19.00
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product_item product_v1">
+                                <div class="discount">
+                                    50%
+                                </div>
+                                <div class="img">
+                                    <img src="./assets/images/products/d1.png" alt="mouse">
+                                </div>
+                                <div>
+                                    <h2 class="title">Logitech G502 Gaming Mouse</h2>
+                                </div>
+                                <div class="price_area">
+                                    <div class="del_price">
+                                        <del>
+                                            $38.00
+                                        </del>
+                                    </div>
+                                    <div class="price">
+                                        $19.00
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product_item product_v1">
+                                <div class="discount">
+                                    50%
+                                </div>
+                                <div class="img">
+                                    <img src="./assets/images/products/d1.png" alt="mouse">
+                                </div>
+                                <div>
+                                    <h2 class="title">Logitech G502 Gaming Mouse</h2>
+                                </div>
+                                <div class="price_area">
+                                    <div class="del_price">
+                                        <del>
+                                            $38.00
+                                        </del>
+                                    </div>
+                                    <div class="price">
+                                        $19.00
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="navigation">
+                        <div class="left_angle top_sales_product_slide_preve">
+                            <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/left_angle.svg');
+                                mask-image: url('./assets/images/icons/left_angle.svg');">
+                            </div>
+                        </div>
+                        <div class="right_angle top_sales_product_slide_next">
+                            <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/right_angle.svg');
+                                mask-image: url('./assets/images/icons/right_angle.svg');">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        $(document).ready(function () {
+            $(".top_sales_product_slide").owlCarousel({
+                items: 5,
+                margin: 24,
+                loop: true,
+                autoplay: true,
+                autoplayHoverPause: true,
+                nav: true,
+                navText: [$('.top_sales_product_slide_preve'),$('.top_sales_product_slide_next')]
+            });
+        });
+    </script>
+    <script src="./assets/js/pluggins/alpine.js"></script>
 </body>
 
 </html>
