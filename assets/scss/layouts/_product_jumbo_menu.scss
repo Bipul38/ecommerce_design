@@ -1,6 +1,7 @@
 #product_category_jumbo_menu {
     background: rgba(36, 36, 36, 0.467);
     height: calc(100vh - 102px);
+    display: none;
     transition-duration: .3s;
     opacity: 0;
     visibility: hidden;
@@ -11,6 +12,7 @@
     &.active{
         opacity: 1;
         visibility: visible;
+        display: block;
     }
 
     .product_list_menu {
