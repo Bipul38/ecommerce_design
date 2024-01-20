@@ -112,7 +112,34 @@ let search_keywords = [
     "Asus",
     "MagSafe",
     "AirPods Max",
-]
+];
+var top_categories = [
+    {
+        image: `./assets/images/products/b1.png`,
+        name: `Accessories`,
+    },
+    {
+        image: `./assets/images/products/b5.png`,
+        name: `Gaming`,
+    },
+    {
+        image: `./assets/images/products/b1.png`,
+        name: `Accessories`,
+    },
+    {
+        image: `./assets/images/products/b5.png`,
+        name: `Gaming`,
+    },
+    {
+        image: `./assets/images/products/b1.png`,
+        name: `Accessories`,
+    },
+    {
+        image: `./assets/images/products/b5.png`,
+        name: `Gaming`,
+    },
+
+];
 
 function increment_cart(price_target){
     event.preventDefault();
