@@ -433,7 +433,6 @@
     </section>
     <section>
         <div class="container">
-
             <div class="top_sales_part">
                 <div class="left">
                     <h2 class="heading">Products On Sale</h2>
@@ -570,6 +569,65 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="product_list">
+                <div class="section_heading">
+                    <h2>New Products</h2>
+                    <div class="right_side">
+                        <a href="">
+                            view all
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div x-data="" class="product_list product_list2">
+                <template x-for="i in 5">
+                    <div  class="product_item product_item_2">
+                        <div class="top">
+                            <div class="img">
+                                <a href="#">
+                                    <img x-bind:id="`p${i}_img_1`" x-bind:src="`./assets/images/products/p5.png`" alt="">
+                                </a>
+                                <ul class="color_list">
+                                    <li @click="change_product_preview_image(`p${i}_img_1`,`./assets/images/products/p2.png`)" style="background-color: red;"></li>
+                                    <li @click="change_product_preview_image(`p${i}_img_1`,`./assets/images/products/p4.png`)" style="background-color: rgba(85, 0, 255, 0.876);"></li>
+                                    <li @click="change_product_preview_image(`p${i}_img_1`,`./assets/images/products/p3.png`)" style="background-color: rgba(0, 242, 255, 0.892);"></li>
+                                </ul>
+                                <a href="#" class="btn banner_btn btn_v2 add_to_cart_btn">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span>Add to Cart</span>
+                                </a>
+                                <a href="#" class="favourite">
+                                    <i class="far fa-heart"></i>
+                                </a>
+                            </div>
+                            
+                        </div>
+                        <div class="devider"></div>
+                        <div class="bottom">
+                            <div class="title">
+                                <a href="#">
+                                    <h3>Iphone 14 promax 256 gig</h3>
+                                </a>
+                            </div>
+                            <div class="price">
+                                <div class="left">
+                                    <del>$1000</del>
+                                    <b>$930</b>
+                                </div>
+                                <div class="right">
+                                    <i class="fa fa-star"></i>
+                                    <span class="rating">4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
             </div>
         </div>
     </section>
