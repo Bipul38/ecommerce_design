@@ -1047,4 +1047,49 @@ nav .nav_body .action_menus ul li:has(.active) > a .svg_icon {
   object-fit: contain;
 }
 
+.highlighted_product {
+  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: 330px 1fr;
+  gap: 30px;
+  background-color: #223949;
+  border-radius: 8px;
+  padding: 40px 60px;
+  position: relative;
+}
+.highlighted_product .shape {
+  width: 400px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: var(--secondary);
+  clip-path: ellipse(59% 70% at 59% 50%);
+}
+.highlighted_product .left_content {
+  display: grid;
+  align-content: center;
+}
+.highlighted_product .left_content .l_content {
+  text-align: center;
+}
+.highlighted_product .left_content .l_content .heading {
+  font-size: 44px;
+  text-transform: uppercase;
+  line-height: 54px;
+  color: var(--white);
+}
+.highlighted_product .left_content .l_content p {
+  font-size: 24px;
+  line-height: 34px;
+  color: var(--white);
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.highlighted_product .right_content .img {
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+
 /*# sourceMappingURL=app.css.map */

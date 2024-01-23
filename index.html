@@ -256,6 +256,7 @@
             </div>
         </nav>
     </header>
+    
     <section id="product_category_jumbo_menu" class="">
         <div class="container">
             <div class="product_list_menu">
@@ -432,6 +433,7 @@
             </div>
         </div>
     </section>
+
     <section>
         <div class="container">
             <div class="top_sales_part">
@@ -573,6 +575,7 @@
             </div>
         </div>
     </section>
+
     <section>
         <div class="container">
             <div class="product_list">
@@ -715,15 +718,15 @@
                         <div class="top">
                             <div class="img">
                                 <a href="#">
-                                    <img x-bind:id="`p${i}_img_1`" x-bind:src="`./assets/images/best_sellers/p1.png`"
-                                        alt="">
+                                    <img x-bind:id="`p${i}_best_img_1`"
+                                        x-bind:src="`./assets/images/best_sellers/p1.png`" alt="">
                                 </a>
                                 <ul class="color_list">
-                                    <li @click="change_product_preview_image(`p${i}_img_1`,`./assets/images/products/p2.png`)"
+                                    <li @click="change_product_preview_image(`p${i}_best_img_1`,`./assets/images/products/p2.png`)"
                                         style="background-color: red;"></li>
-                                    <li @click="change_product_preview_image(`p${i}_img_1`,`./assets/images/products/p4.png`)"
+                                    <li @click="change_product_preview_image(`p${i}_best_img_1`,`./assets/images/products/p4.png`)"
                                         style="background-color: rgba(85, 0, 255, 0.876);"></li>
-                                    <li @click="change_product_preview_image(`p${i}_img_1`,`./assets/images/products/p3.png`)"
+                                    <li @click="change_product_preview_image(`p${i}_best_img_1`,`./assets/images/products/p3.png`)"
                                         style="background-color: rgba(0, 242, 255, 0.892);"></li>
                                 </ul>
                                 <a href="#" class="btn banner_btn btn_v2 add_to_cart_btn">
@@ -802,6 +805,34 @@
                     </div>
                     <div class="img">
                         <img src="./assets/images/brands/sony.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="highlighted_product">
+                <div class="shape"></div>
+                <div class="left_content">
+                    <div class="l_content">
+                        <h2 class="heading">
+                            SMART WATCH
+                        </h2>
+                        <p>
+                            Various designs and brands
+                        </p>
+                        <div class="btn_view">
+                            <a href="#" class="btn btn_v2">
+                                view
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="right_content">
+                    <div class="img">
+                        <img src="./assets/images/highlighted_product/1.png" alt="">
                     </div>
                 </div>
             </div>
