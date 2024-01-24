@@ -741,6 +741,112 @@ nav .nav_body .action_menus ul li:has(.active) > a .svg_icon {
   background-color: var(--white);
 }
 
+footer .top {
+  background-color: #021c42;
+  padding: 16px;
+}
+footer .top .footer_top_content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  justify-content: space-between;
+  gap: 30px;
+}
+footer .top .footer_top_content .footer_item h3 {
+  color: var(--white);
+  font-size: 16px;
+  line-height: 14px;
+  margin-bottom: 15px;
+}
+footer .top .footer_top_content .footer_item ul li {
+  margin-bottom: 10px;
+}
+footer .top .footer_top_content .footer_item ul li a {
+  font-size: 16px;
+  color: var(--white);
+}
+footer .top .footer_top_content .footer_item ul li a i {
+  padding-right: 5px;
+}
+footer .top .footer_top_content .footer_item .s_icons {
+  display: flex;
+  gap: 10px;
+}
+footer .top .footer_top_content .footer_item .s_icons li a {
+  color: white;
+  font-size: 18px;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid var(--white);
+}
+footer .top .footer_top_content .footer_item .s_icons li a i {
+  padding-right: 0;
+}
+footer .bottom {
+  background-color: #021736;
+  padding: 48px;
+}
+footer .bottom .footer_bottom_content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: var(--white);
+}
+footer .bottom .footer_bottom_content p {
+  font-size: 12px;
+}
+footer .bottom .footer_bottom_content .right ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+footer .bottom .footer_bottom_content .right ul li a {
+  color: var(--white);
+  font-size: 12px;
+}
+
+.subscribe_form {
+  position: relative;
+  margin-bottom: 20px;
+}
+.subscribe_form .icon {
+  font-size: 20px;
+  color: var(--white);
+  position: absolute;
+  left: 12px;
+  border-left-style: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.subscribe_form .input {
+  width: 100%;
+  padding: 12px 36px;
+  border: 1px solid var(--white);
+  border-radius: 5px;
+  background-color: transparent;
+  box-sizing: border-box;
+  color: white;
+  font-size: 16px;
+}
+.subscribe_form .button {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 20px;
+  color: var(--white);
+  right: 12px;
+  position: absolute;
+  border-left-style: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.subscribe_form .button i {
+  color: white;
+}
+
 .banner_content {
   display: grid;
   grid-template-columns: 500px 1fr;
@@ -1135,6 +1241,19 @@ nav .nav_body .action_menus ul li:has(.active) > a .svg_icon {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.our_features {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.our_features li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 /*# sourceMappingURL=app.css.map */
