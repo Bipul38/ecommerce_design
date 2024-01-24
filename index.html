@@ -256,7 +256,7 @@
             </div>
         </nav>
     </header>
-    
+
     <section id="product_category_jumbo_menu" class="">
         <div class="container">
             <div class="product_list_menu">
@@ -417,6 +417,7 @@
             </div>
         </div>
     </section>
+
     <section>
         <div class="container">
             <div x-data="top_categories" class="top_categories">
@@ -835,6 +836,49 @@
                         <img src="./assets/images/highlighted_product/1.png" alt="">
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="section_heading">
+                <h2>Our Blogs</h2>
+                <div class="right_side">
+                    <a href="">
+                        view all
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div x-data="" class="blog_list">
+                <template x-for="i in 4" x-key="i">
+                    <div class="blog_item">
+                        <div class="top">
+                            <div class="img">
+                                <img src="./assets/images/blog_image/1.jpg" alt="blog_image">
+                            </div>
+                        </div>
+                        <div class="mid">
+                            <div class="left mid_item">
+                                <a href="#">
+                                    <i class="fa fa-calendar"></i>
+                                    <span class="time">August, 8, 2023</span>
+                                </a>
+                            </div>
+                            <div class="right mid_item">
+                                <a href="#">
+                                    <i class="fa fa-stopwatch"></i>
+                                    <span class="time">3 min read</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <h3 class="heading">Meta Platforms plans to release free software that...</h3>
+                            <p>The parent company of Facebook, Meta Platforms, is introducing software to help developers </p>
+                        </div>
+                    </div>
+                </template>
             </div>
         </div>
     </section>
