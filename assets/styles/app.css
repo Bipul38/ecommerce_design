@@ -333,7 +333,7 @@ h3 {
 .container {
   width: 1200px;
   margin: auto;
-  padding: 15px;
+  padding: 0px 10px;
 }
 @media (min-width: 0px) and (max-width: 575.9px) {
   .container {
@@ -785,7 +785,7 @@ footer .top .footer_top_content .footer_item .s_icons li a i {
   padding-right: 0;
 }
 footer .bottom {
-  background-color: #021736;
+  background-color: #021128;
   padding: 48px;
 }
 footer .bottom .footer_bottom_content {
