@@ -2,7 +2,7 @@
     width: 1200px;
     // border: var(--border);
     margin: auto;
-    padding:15px;
+    padding:0px 10px;
 
     @include xs() {
         width: calc(100% - 30px);
