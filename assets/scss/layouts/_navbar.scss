@@ -1,4 +1,9 @@
 nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: -8px -6px 11px 2px;
     .nav_body {
         display: flex;
         flex-wrap: wrap;
