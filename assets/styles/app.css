@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "inter-regular";
-  src: url("../fonts/inter/inter-Regular.ttf");
+  font-family: "Inter-Regular";
+  src: url("../fonts/inter/Inter-Regular.ttf");
 }
 :root {
   --border:red;
@@ -10,8 +10,8 @@
   --white: #fff;
   --black: #0C0C0C;
   --navy_blue: #042352;
-  --app_font: "inter_Regular";
-  --inter: "inter_Regular";
+  --app_font: "Inter-Regular";
+  --inter: "Inter-Regular";
 }
 
 .svg_icon {
@@ -283,7 +283,7 @@ h3 {
   position: relative;
 }
 .product_item .discount {
-  background-color: #F45E0C;
+  background-color: rgba(244, 94, 12, 0.3294117647);
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   left: 0px;
@@ -798,7 +798,7 @@ footer .top .footer_top_content .footer_item .s_icons li a i {
 }
 footer .bottom {
   background-color: #021128;
-  padding: 48px;
+  padding: 18px;
 }
 footer .bottom .footer_bottom_content {
   display: flex;
