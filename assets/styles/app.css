@@ -366,6 +366,13 @@ h3 {
   }
 }
 
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: white;
+  box-shadow: -8px -6px 11px 2px;
+}
 nav .nav_body {
   display: flex;
   flex-wrap: wrap;
@@ -750,6 +757,11 @@ footer .top .footer_top_content {
   grid-template-columns: repeat(auto-fit, 300px);
   justify-content: space-between;
   gap: 30px;
+}
+@media (min-width: 0px) and (max-width: 400px) {
+  footer .top .footer_top_content {
+    grid-template-columns: repeat(auto-fit, 270px);
+  }
 }
 footer .top .footer_top_content .footer_item h3 {
   color: var(--white);
