@@ -4,6 +4,10 @@
     gap: 20px;
     justify-content: space-between;
     padding-bottom: 60px;
+
+    @include custom_media(0px, 400px){
+        grid-template-columns: 1fr;
+    }
     .blog_item{
         border-radius: 8px;
         overflow: hidden;
