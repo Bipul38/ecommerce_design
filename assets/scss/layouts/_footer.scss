@@ -7,6 +7,11 @@ footer{
             grid-template-columns: repeat(auto-fit, 300px);
             justify-content: space-between;
             gap: 30px;
+
+            @include custom_media(0px, 400px){
+                grid-template-columns: repeat(auto-fit, 270px);
+            }
+
             .footer_item{
                 h3{
                     color: var(--white);
@@ -51,7 +56,7 @@ footer{
     }
     .bottom{
         background-color: #021128;
-        padding: 48px;
+        padding: 18px;
         .footer_bottom_content{
             display: flex;
             justify-content: space-between;
@@ -67,6 +72,12 @@ footer{
                     display: flex;
                     justify-content: flex-end;
                     gap: 20px;
+
+                    @include custom_media(0px, 400px){
+                        gap: 12px;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                    }
                     li{
                         a{
                             color: var(--white);
